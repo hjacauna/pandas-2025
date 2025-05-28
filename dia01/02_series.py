@@ -1,0 +1,17 @@
+# %%
+
+import pandas as pd
+
+
+series_idades = pd.Series(
+    [18, 20, 22, 19, 21, 23, 25, 24, 22, 20],)
+series_idades
+
+# %%
+
+
+media_idadades = series_idades.mean()
+print(f"A média das idades é: {media_idadades:.2f} anos")
+summary = series_idades.describe()
+print("Resumo estatístico das idades:")
+print(summary)
