@@ -1,7 +1,13 @@
 # %%
 import pandas as pd
+from pathlib import Path
 
-df = pd.read_csv("../data/customers.csv", sep=";") # read csv file with custom separator
+# prefer local sample file if the original dataset is missing
+file_path = Path("../data/customers.csv")
+if not file_path.exists():
+    file_path = Path("customers2.csv")
+
+df = pd.read_csv(file_path, sep=";")
 df
 
 # %%
